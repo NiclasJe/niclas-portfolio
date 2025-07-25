@@ -58,7 +58,7 @@ const About = () => {
             A well experienced mobile developer passionate about combining the latest technology with thoughtful design.
           </p>
         </div>
-        
+
         <div className="flex justify-center mb-16">
           <div className="animate-slide-in-left w-full max-w-3xl">
             <Card className="h-full border-0 shadow-lg">
@@ -75,36 +75,36 @@ const About = () => {
                     </p>
                   </div>
                 </div>
-                
+
                 <p className="text-lg leading-relaxed mb-6">
-                  I'm a passionate mobile developer with over 5 years of experience creating innovative 
-                  mobile applications for all purposes. My expertise covers both cross-platform 
-                  development with Flutter and native Android development, enabling me to build robust 
+                  I'm a passionate mobile developer with over 5 years of experience creating innovative
+                  mobile applications for all purposes. My expertise covers both cross-platform
+                  development with Flutter and native Android development, enabling me to build robust
                   and scalable solutions across platforms.
                 </p>
-                
+
                 <p className="text-muted-foreground mb-6">
-                  I am a mobile developer who values clean, maintainable code and intuitive user interfaces 
-                  that elevate the overall user experience. I stay consistently engaged with new 
-                  technologies and keep up with the latest trends in mobile development — there is rarely 
+                  I am a mobile developer who values clean, maintainable code and intuitive user interfaces
+                  that elevate the overall user experience. I stay consistently engaged with new
+                  technologies and keep up with the latest trends in mobile development — there is rarely
                   a day when I am not building something new or learning a new tool or concept.
                 </p>
                 <p className="text-muted-foreground mb-6">
-                  Over the years, I have had the privilege of working closely with industry experts, which 
-                  has helped accelerate my growth and deepen my technical knowledge. Through a combination 
-                  of professional roles and personal projects, I have built up substantial experience in 
+                  Over the years, I have had the privilege of working closely with industry experts, which
+                  has helped accelerate my growth and deepen my technical knowledge. Through a combination
+                  of professional roles and personal projects, I have built up substantial experience in
                   mobile app development, particularly within Flutter and Android.
                 </p>
 
                 <p className="text-muted-foreground mb-6">
-                  My previous experiences have given me a strong understanding of the full software 
-                  development lifecycle — from initial idea and design, through development and testing, 
-                  all the way to release, post-launch support, and iteration based on user feedback. 
-                  This holistic perspective allows me to contribute not only as a developer but as a 
-                  product-minded team member who understands the importance of usability, quality, and 
+                  My previous experiences have given me a strong understanding of the full software
+                  development lifecycle — from initial idea and design, through development and testing,
+                  all the way to release, post-launch support, and iteration based on user feedback.
+                  This holistic perspective allows me to contribute not only as a developer but as a
+                  product-minded team member who understands the importance of usability, quality, and
                   long-term maintainability.
                 </p>
-                
+
                 <div className="flex flex-wrap gap-2 mb-6">
                   <Badge variant="secondary">Flutter</Badge>
                   <Badge variant="secondary">Android</Badge>
@@ -112,7 +112,7 @@ const About = () => {
                   <Badge variant="secondary">5+ years experience</Badge>
                   <Badge variant="secondary">3 published apps</Badge>
                 </div>
-                
+
                 <Button size="lg" className="w-full sm:w-auto">
                   <Download className="mr-2 h-4 w-4" />
                   Download Resume
@@ -121,12 +121,12 @@ const About = () => {
             </Card>
           </div>
         </div>
-        
-        <div className="animate-fade-in mt-30">
-          <h3 className="text-3xl font-bold text-center mb-12">
+
+        <div className="animate-fade-in mt-32">
+          <h3 className="text-3xl font-bold text-center mb-16">
             Professional <span className="gradient-text">Experience</span>
           </h3>
-          
+
           <div className="space-y-8">
             {experience.map((exp, index) => (
               <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
@@ -147,7 +147,7 @@ const About = () => {
                       </p>
                     </div>
                   </div>
-                  
+
                   <ul className="space-y-2">
                     {exp.highlights.map((highlight, highlightIndex) => (
                       <li key={highlightIndex} className="flex items-start">

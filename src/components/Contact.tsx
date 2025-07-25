@@ -1,9 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
-import { Mail, MapPin, Phone, Send } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 
 const Contact = () => {
   const contactInfo = [
@@ -28,7 +24,7 @@ const Contact = () => {
   ];
 
   return (
-    <section className="py-20 bg-muted/30">
+    <section id="lets-connect" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold font-space mb-6">
@@ -38,8 +34,8 @@ const Contact = () => {
             Ready to bring your mobile app idea to life? Let's discuss your project and create something amazing together.
           </p>
         </div>
-        
-        <div className="flex justify-center">
+
+        <div className="flex justify-center mb-96">
           <div className="animate-slide-in-right w-full max-w-lg">
             <Card className="border-0 shadow-lg">
               <CardContent className="p-8 mb-20">

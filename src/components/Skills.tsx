@@ -1,11 +1,11 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { 
-  Smartphone, 
-  Code, 
-  Palette, 
-  Database, 
-  Cloud, 
+import {
+  Smartphone,
+  Code,
+  Palette,
+  Database,
+  Cloud,
   Shield,
   Zap,
   Users
@@ -17,19 +17,19 @@ const Skills = () => {
       title: "Mobile Development",
       icon: <Smartphone className="h-6 w-6" />,
       color: "from-blue-500 to-cyan-500",
-      skills: ["Flutter", "Android", "iOS"]
+      skills: ["Flutter", "Android", "iOS", "Kotlin", "Java", "Jetpack Compose", "Dart"]
     },
     {
       title: "Programming Languages",
       icon: <Code className="h-6 w-6" />,
       color: "from-green-500 to-teal-500",
-      skills: ["Dart", "Kotlin", "Java", "Swift", "C#", "C++", "C", "TypeScript", "Python"]
+      skills: ["Dart", "Kotlin", "Java", "Swift", "C#", "C++", "C", "TypeScript", "Javascript", "Python"]
     },
     {
       title: "UI/UX Design",
       icon: <Palette className="h-6 w-6" />,
       color: "from-purple-500 to-pink-500",
-      skills: ["Figma", "Adobe XD", "Prototyping"]
+      skills: ["Figma", "Adobe XD", "Adobe Photoshop", "Prototyping"]
     },
     {
       title: "Backend & APIs",
@@ -47,13 +47,13 @@ const Skills = () => {
       title: "Security & Testing",
       icon: <Shield className="h-6 w-6" />,
       color: "from-teal-500 to-green-500",
-      skills: ["Fireebase Auth", "JUnit", "BankID", "Mockito", "Jenkins"]
+      skills: ["Fireebase Auth", "JUnit", "BankID", "Mockito", "Jenkins", "flutter_test"]
     },
     {
       title: "Collaboration",
       icon: <Users className="h-6 w-6" />,
       color: "from-pink-500 to-rose-500",
-      skills: ["Git", "Jira", "Azure", "Gerrit"]
+      skills: ["Git", "Jira", "Azure", "Gerrit", "Microsoft Teams", "Slack"]
     }
   ];
 
@@ -68,11 +68,11 @@ const Skills = () => {
             A comprehensive toolkit for building world-class mobile applications
           </p>
         </div>
-        
+
         <div className="flex flex-col items-center gap-5">
           <div className="flex flex-wrap justify-center gap-5">
             {skillCategories.slice(0, 4).map((category, index) => (
-              <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-0 shadow-md animate-slide-in-right flex flex-col items-stretch" style={{animationDelay: `${index * 0.1}s`, width: '320px', height: '200px'}}>
+              <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-0 shadow-md animate-slide-in-right flex flex-col items-stretch" style={{ animationDelay: `${index * 0.1}s`, width: '320px', height: '200px' }}>
                 <CardContent className="p-6 flex-1 flex flex-col">
                   <div className="flex items-center mb-4">
                     <div className={`p-3 rounded-lg bg-gradient-to-r ${category.color} text-white mr-3`}>
@@ -93,10 +93,10 @@ const Skills = () => {
               </Card>
             ))}
           </div>
-          
+
           <div className="flex flex-wrap justify-center gap-5">
             {skillCategories.slice(4).map((category, index) => (
-              <Card key={index + 4} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-0 shadow-md animate-slide-in-right flex flex-col items-stretch" style={{animationDelay: `${(index + 4) * 0.1}s`, width: '320px', height: '200px'}}>
+              <Card key={index + 4} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-0 shadow-md animate-slide-in-right flex flex-col items-stretch" style={{ animationDelay: `${(index + 4) * 0.1}s`, width: '320px', height: '200px' }}>
                 <CardContent className="p-6 flex-1 flex flex-col">
                   <div className="flex items-center mb-4">
                     <div className={`p-3 rounded-lg bg-gradient-to-r ${category.color} text-white mr-3`}>

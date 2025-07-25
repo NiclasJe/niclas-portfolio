@@ -5,6 +5,7 @@ import { Github, Smartphone, ChevronLeft, ChevronRight, X } from "lucide-react";
 import { FaApple, FaGooglePlay } from "react-icons/fa";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { useState } from "react";
+import React from "react";
 
 const Projects = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -63,7 +64,7 @@ const Projects = () => {
     {
       title: "Unravel",
       description: "A murder mystery game where players find clues, solve puzzles and unravel the truth",
-      info: "Unravel is a social detective experience originally created for a personal summer party. It blends physical and digital clues, encouraging players to explore their surroundings while uncovering the mystery. The app integrates with ESP32 modules to interact with the physical environment, resulting in a unique and immersive adventure.",
+      info: "Unravel is a social detective experience originally created for a private summer party. It blends physical and digital clues, encouraging players to explore their surroundings while uncovering the mystery. The app integrates with ESP32 modules to interact with the physical environment, resulting in a unique and immersive adventure.",
       note: "To solve the case accurately, physical evidence must also be collected. Because of this, the digital clues are insufficient to solve the case.",
       images: ["/images/unravel/unravel_thumbnail.png", "/images/unravel/unravel_sizes.png", "/images/unravel/unravel_clues.png", "/images/unravel/unravel_puzzles.png"],
       tags: ["Flutter", "https", "ESP32"],
@@ -81,32 +82,18 @@ const Projects = () => {
     },
     {
       title: "Pappas rökeri",
-      description: "Meditation and mindfulness app with guided sessions, progress tracking, and community features.",
-      info: "Hippy is a social music experience where users challenge their friends using real Spotify tracks. Create or join sessions and test your musical memory by guessing song placements, details, and more — all in real-time. Built with Flutter and integrated with Spotify, Hippy offers an engaging way to rediscover your playlists and compete in a fun, interactive format. Spotify Premium required for session hosts.",
+      description: "Monitors meat temperatures, estimates cook times, and notifies when the food is ready",
+      info: "Pappas rökeri is a home automation app designed to work with a Bluetooth-connected meat thermometer device that supports up to five probes. In the app, users can set a target temperature for each probe, receive notifications when the desired temperature is reached, and view an estimated time remaining until each probe reaches its target. The app also allows adding multiple devices to monitor additional probes simultaneously. This makes it possible to track the internal temperature of different pieces of meat in real time, providing better control during grilling or smoking.",
       images: ["/images/smoker/smoker_thumbnail.png", "/images/smoker/smoker_notification.png", "/images/smoker/smoker_set_temp.png", "/images/smoker/smoker_add.png"],
-      tags: ["React Native", "Audio", "Analytics", "Push Notifications"],
+      tags: ["Android", "Kotlin", "Jetpack Compose", "ESP32"],
       category: "Home automation",
       color: "from-teal-400 to-blue-500",
-      appStore: "https://apps.apple.com/app/mindful-moments/id123456793",
-      playStore: "https://play.google.com/store/apps/details?id=com.example.mindfulmoments",
-      github: "https://github.com/niclas/mindful-moments"
+      github: undefined
     },
-    {
-      title: "ShopSmart",
-      description: "E-commerce app with AR try-on features, personalized recommendations, and seamless checkout.",
-      info: "Hippy is a social music experience where users challenge their friends using real Spotify tracks. Create or join sessions and test your musical memory by guessing song placements, details, and more — all in real-time. Built with Flutter and integrated with Spotify, Hippy offers an engaging way to rediscover your playlists and compete in a fun, interactive format. Spotify Premium required for session hosts.",
-      images: ["/images/hippy/hippy_thumbnail.png", "/images/hippy/hippy_start_screen.png"],
-      tags: ["ARKit", "Swift", "Machine Learning", "Payment"],
-      category: "E-commerce",
-      color: "from-indigo-400 to-purple-500",
-      appStore: "https://apps.apple.com/app/shop-smart-ar/id123456794",
-      playStore: "https://play.google.com/store/apps/details?id=com.example.shopsmart",
-      github: "https://github.com/niclas/shop-smart"
-    }
   ];
 
   return (
-    <section className="py-20 bg-muted/30">
+    <section id="projects" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold font-space mb-6">
@@ -115,20 +102,22 @@ const Projects = () => {
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             A look into the mobile apps I have crafted during late nights and passion-driven weekends.
           </p>
+          <p className="text-sm text-muted-foreground mt-2 max-w-2xl mx-auto">
+            Feel free to download and test the apps that are available.
+          </p>
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <div className="flex flex-wrap justify-center gap-10" style={{ width: '1500px' }}>
           {projects.map((project, index) => (
-            <>
+            <React.Fragment key={index}>
               <Card
-                key={index}
                 className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden animate-slide-in-left border-0 shadow-lg cursor-pointer"
-                style={{animationDelay: `${index * 0.1}s`}}
+                style={{ animationDelay: `${index * 0.1}s`, width: '460px', maxWidth: '100%' }}
                 onClick={() => setOpenIndex(index)}
               >
                 <div className="relative overflow-hidden">
-                  <img 
-                    src={project.images[0]} 
+                  <img
+                    src={project.images[0]}
                     alt={project.title}
                     className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
                   />
@@ -157,10 +146,10 @@ const Projects = () => {
                     <Button size="sm" className="flex-1">
                       <Smartphone className="mr-2 h-4 w-4" />
                       Download APK
-                    </Button>                  
+                    </Button>
                     {project.appStore && (
-                      <Button 
-                        variant="outline" 
+                      <Button
+                        variant="outline"
                         size="sm"
                         onClick={() => window.open(project.appStore, '_blank')}
                       >
@@ -168,8 +157,8 @@ const Projects = () => {
                       </Button>
                     )}
                     {project.playStore && (
-                      <Button 
-                        variant="outline" 
+                      <Button
+                        variant="outline"
                         size="sm"
                         onClick={() => window.open(project.playStore, '_blank')}
                       >
@@ -177,8 +166,8 @@ const Projects = () => {
                       </Button>
                     )}
                     {project.github && (
-                      <Button 
-                        variant="outline" 
+                      <Button
+                        variant="outline"
                         size="sm"
                         onClick={() => window.open(project.github, '_blank')}
                       >
@@ -188,10 +177,13 @@ const Projects = () => {
                   </div>
                 </CardContent>
               </Card>
+
               <Dialog open={openIndex === index} onOpenChange={() => setOpenIndex(null)}>
                 <DialogContent className="max-w-5xl mx-auto p-0 min-h-[500px] max-h-[80vh] flex flex-col">
                   <DialogHeader className="p-8 pb-4 flex-shrink-0">
-                    <DialogTitle className="text-3xl font-bold mb-2 gradient-text">{project.title}</DialogTitle>
+                    <DialogTitle className="text-3xl font-bold mb-2 gradient-text">
+                      {project.title}
+                    </DialogTitle>
                     <DialogDescription className="mb-4 text-muted-foreground text-lg">
                       {project.category}
                     </DialogDescription>
@@ -203,44 +195,73 @@ const Projects = () => {
                       </div>
                     )}
                   </DialogHeader>
+
                   <div className="flex-1 overflow-y-auto px-8">
-                    <div className="relative w-full" style={{height: '396px'}}>
-                      <img 
-                        src={project.images[0]} 
-                        alt={project.title} 
-                        className="absolute object-cover rounded-xl hover:scale-105 cursor-pointer transition-all duration-300 hover:shadow-2xl" 
-                        style={{width: '378px', height: '251px', left: '12px', top: '37px', boxShadow: '-4px 4px 10px rgba(0, 0, 0, 0.3)', outline: '1px solid rgba(255, 255, 255, 0.2)'}} 
+                    <div className="relative w-full" style={{ height: '396px' }}>
+                      <img
+                        src={project.images[0]}
+                        alt={project.title}
+                        className="absolute object-cover rounded-xl hover:scale-105 cursor-pointer transition-all duration-300 hover:shadow-2xl"
+                        style={{
+                          width: '378px',
+                          height: '251px',
+                          left: '12px',
+                          top: '37px',
+                          boxShadow: '-4px 4px 10px rgba(0, 0, 0, 0.3)',
+                          outline: '1px solid rgba(255, 255, 255, 0.2)'
+                        }}
                         onClick={() => openImageDialog(project, 0)}
                       />
-                      <img 
-                        src={project.images[3]} 
-                        alt="Extra 3" 
-                        className="absolute object-cover rounded-xl hover:scale-105 cursor-pointer transition-all duration-300 hover:shadow-2xl" 
-                        style={{width: '256px', height: '272px', left: '687px', top: '18px', boxShadow: '-4px 4px 10px rgba(0, 0, 0, 0.3)', outline: '1px solid rgba(255, 255, 255, 0.2)'}} 
+                      <img
+                        src={project.images[3]}
+                        alt="Extra 3"
+                        className="absolute object-cover rounded-xl hover:scale-105 cursor-pointer transition-all duration-300 hover:shadow-2xl"
+                        style={{
+                          width: '256px',
+                          height: '272px',
+                          left: '687px',
+                          top: '18px',
+                          boxShadow: '-4px 4px 10px rgba(0, 0, 0, 0.3)',
+                          outline: '1px solid rgba(255, 255, 255, 0.2)'
+                        }}
                         onClick={() => openImageDialog(project, 3)}
                       />
-                      <img 
-                        src={project.images[1]} 
-                        alt="Extra 1" 
-                        className="absolute object-cover rounded-xl hover:scale-105 cursor-pointer transition-all duration-300 hover:shadow-2xl" 
-                        style={{width: '365px', height: '136px', left: '287px', top: '201px', boxShadow: '-4px 4px 10px rgba(0, 0, 0, 0.3)', outline: '1px solid rgba(255, 255, 255, 0.2)'}} 
+                      <img
+                        src={project.images[1]}
+                        alt="Extra 1"
+                        className="absolute object-cover rounded-xl hover:scale-105 cursor-pointer transition-all duration-300 hover:shadow-2xl"
+                        style={{
+                          width: '365px',
+                          height: '136px',
+                          left: '287px',
+                          top: '201px',
+                          boxShadow: '-4px 4px 10px rgba(0, 0, 0, 0.3)',
+                          outline: '1px solid rgba(255, 255, 255, 0.2)'
+                        }}
                         onClick={() => openImageDialog(project, 1)}
                       />
-                      <img 
-                        src={project.images[2]} 
-                        alt="Extra 2" 
-                        className="absolute object-cover rounded-xl z-40 hover:scale-105 cursor-pointer transition-all duration-300 hover:shadow-2xl" 
-                        style={{width: '256px', height: '170px', left: '416px', top: '12px', boxShadow: '-4px 4px 10px rgba(0, 0, 0, 0.3)', outline: '1px solid rgba(255, 255, 255, 0.2)'}} 
+                      <img
+                        src={project.images[2]}
+                        alt="Extra 2"
+                        className="absolute object-cover rounded-xl z-40 hover:scale-105 cursor-pointer transition-all duration-300 hover:shadow-2xl"
+                        style={{
+                          width: '256px',
+                          height: '170px',
+                          left: '416px',
+                          top: '12px',
+                          boxShadow: '-4px 4px 10px rgba(0, 0, 0, 0.3)',
+                          outline: '1px solid rgba(255, 255, 255, 0.2)'
+                        }}
                         onClick={() => openImageDialog(project, 2)}
                       />
                     </div>
-                    
+
                     <div className="relative mb-6">
                       <div className="absolute inset-0 flex items-center">
                         <div className="w-full border-t border-gradient-to-r from-transparent via-white/20 to-transparent"></div>
                       </div>
                     </div>
-                    
+
                     <p className="mb-4 text-base leading-relaxed text-foreground">
                       {project.info}
                       {project.note && (
@@ -258,6 +279,7 @@ const Projects = () => {
                       ))}
                     </div>
                   </div>
+
                   <div className="flex-shrink-0 p-8 pt-4 border-t bg-background">
                     <div className="flex gap-2">
                       <Button size="sm" className="flex-1">
@@ -265,8 +287,8 @@ const Projects = () => {
                         Download APK
                       </Button>
                       {project.appStore && (
-                        <Button 
-                          variant="outline" 
+                        <Button
+                          variant="outline"
                           size="sm"
                           onClick={() => window.open(project.appStore, '_blank')}
                         >
@@ -274,8 +296,8 @@ const Projects = () => {
                         </Button>
                       )}
                       {project.playStore && (
-                        <Button 
-                          variant="outline" 
+                        <Button
+                          variant="outline"
                           size="sm"
                           onClick={() => window.open(project.playStore, '_blank')}
                         >
@@ -283,8 +305,8 @@ const Projects = () => {
                         </Button>
                       )}
                       {project.github && (
-                        <Button 
-                          variant="outline" 
+                        <Button
+                          variant="outline"
                           size="sm"
                           onClick={() => window.open(project.github, '_blank')}
                         >
@@ -295,16 +317,17 @@ const Projects = () => {
                   </div>
                 </DialogContent>
               </Dialog>
-            </>
+            </React.Fragment>
           ))}
         </div>
 
+
         <Dialog open={imageDialogOpen} onOpenChange={setImageDialogOpen}>
-          <DialogContent 
+          <DialogContent
             className="max-w-6xl h-[90vh] p-0 bg-transparent border-none flex flex-col"
             onKeyDown={handleKeyDown}
           >
-            <div 
+            <div
               className="relative w-full flex-1 flex items-center justify-center"
               onClick={() => setImageDialogOpen(false)}
             >
@@ -351,9 +374,9 @@ const Projects = () => {
                     src={currentProject.images[currentImageIndex]}
                     alt={`${currentProject.title} - Image ${currentImageIndex + 1}`}
                     className="object-contain rounded-lg shadow-2xl cursor-pointer"
-                    style={{ 
-                      maxWidth: '60%', 
-                      maxHeight: '60%' 
+                    style={{
+                      maxWidth: '60%',
+                      maxHeight: '60%'
                     }}
                     onClick={(e) => {
                       e.stopPropagation();
