@@ -1,9 +1,9 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Github, Smartphone, ChevronLeft, ChevronRight, X } from "lucide-react";
+import { Github, Smartphone, ChevronLeft, ChevronRight, X } from "lucide-react";
 import { FaApple, FaGooglePlay } from "react-icons/fa";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogClose } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { useState } from "react";
 
 const Projects = () => {
@@ -40,59 +40,52 @@ const Projects = () => {
     {
       title: "Hippy",
       description: "A fun and engaging music quiz app where friends guess the song using Spotify playbacks.",
-      info: "Hippy is a social music experience where users challenge their friends by playing songs via Spotify. Create or join sessions and test your musical memory by guessing the release year, song details, and more. Built with Flutter and integrated with Spotify, Hippy offers an engaging way to rediscover your playlists and compete in a fun, interactive format. Choose from various game modes and dificulty levels to keep the challenge fresh.",
+      info: "Hippy is a social music experience where users challenge their friends by playing songs via the Spotify app. Create or join sessions and test your musical memory by guessing the release year, song details, and more. Built with Flutter and integrated with Spotify, Hippy offers an engaging way to rediscover your playlists and compete in a fun, interactive format. Choose from various game modes and dificulty levels to keep the challenge fresh.",
       note: "To test the app, the Spotify app must be installed and a Spotify Premium account is required. The Spotify user also needs to be added to a list of active users in the Spotify Developer settings. To bypass the playback of the tracks and test the demo, you can enter a dedicated demo mode by presing the 'Skapa ett spel' button, then long-pressing the back button, followed by a long-press on the question mark and then long-pressing the desired game session.",
       images: ["/images/hippy/hippy_thumbnail.png", "/images/hippy/hippy_in_game.png", "/images/hippy/hippy_start_screen.png", "/images/hippy/hippy_creation_result.png"],
-      tags: ["Flutter", "Firebase", "Spotify SDK"],
-      category: "Games and Trivia",
+      tags: ["Flutter", "Firebase", "Spotify SDK", "SQL"],
+      category: "Games & Trivia",
       color: "from-green-400 to-blue-500",
-      appStore: "https://apps.apple.com/app/hippy-music-quiz/id123456789",
-      playStore: "https://play.google.com/store/apps/details?id=com.example.hippy",
-      github: "https://github.com/niclas/hippy"
+      appStore: "https://apps.apple.com/se/app/hippy/id6746072263?l=en-GB",
+      playStore: "https://play.google.com/store/apps/details?id=com.koda.hippy",
     },
     {
-      title: "TaskMaster",
-      description: "An intuitive task management app with team collaboration features and AI-powered productivity insights.",
-      info: "Hippy is a social music experience where users challenge their friends using real Spotify tracks. Create or join sessions and test your musical memory by guessing song placements, details, and more — all in real-time. Built with Flutter and integrated with Spotify, Hippy offers an engaging way to rediscover your playlists and compete in a fun, interactive format. Spotify Premium required for session hosts.",
-      images: ["/images/hippy/hippy_thumbnail.png", "/images/hippy/hippy_start_screen.png"],
-      tags: ["Flutter", "Node.js", "MongoDB", "AI/ML"],
-      category: "Productivity",
+      title: "Ordly",
+      description: "A daily challenge where the user guesses the Swedish word in a limited number of tries.",
+      info: "Ordly is a daily word challenge where players try to guess a hidden five-letter Swedish word in six attempts. After each guess, the game provides feedback to help narrow down the solution - making it both strategic and satisfying. The game is available on both Android and iOS and works seamlessly across all screen sizes, from phones to tablets. Simple to pick up, hard to put down - inspired by the classic word game format with a Swedish twist.",
+      images: ["/images/ordly/ordly_thumbnail.png", "/images/ordly/ordly_sizes.png", "/images/ordly/ordly_theme.png", "/images/ordly/ordly_result.png"],
+      tags: ["Flutter", "Firebase", "SQL"],
+      category: "Puzzles",
       color: "from-purple-400 to-pink-500",
-      appStore: "https://apps.apple.com/app/taskmaster-productivity/id123456790",
-      playStore: "https://play.google.com/store/apps/details?id=com.example.taskmaster",
-      github: "https://github.com/niclas/taskmaster"
+      appStore: "https://apps.apple.com/se/app/ordly-ordpussel/id6746171956?l=en-GB",
+      playStore: "https://play.google.com/store/apps/details?id=com.koda.ordly",
     },
     {
-      title: "FoodieExplorer",
-      description: "Discover local restaurants, read reviews, and order food with this social dining experience app.",
-      info: "Hippy is a social music experience where users challenge their friends using real Spotify tracks. Create or join sessions and test your musical memory by guessing song placements, details, and more — all in real-time. Built with Flutter and integrated with Spotify, Hippy offers an engaging way to rediscover your playlists and compete in a fun, interactive format. Spotify Premium required for session hosts.",
-      images: ["/images/hippy/hippy_thumbnail.png", "/images/hippy/hippy_start_screen.png"],
-      tags: ["Swift", "SwiftUI", "Core Data", "MapKit"],
-      category: "Food & Dining",
+      title: "Unravel",
+      description: "A murder mystery game where players find clues, solve puzzles and unravel the truth",
+      info: "Unravel is a social detective experience originally created for a personal summer party. It blends physical and digital clues, encouraging players to explore their surroundings while uncovering the mystery. The app integrates with ESP32 modules to interact with the physical environment, resulting in a unique and immersive adventure.",
+      note: "To solve the case accurately, physical evidence must also be collected. Because of this, the digital clues are insufficient to solve the case.",
+      images: ["/images/unravel/unravel_thumbnail.png", "/images/unravel/unravel_sizes.png", "/images/unravel/unravel_clues.png", "/images/unravel/unravel_puzzles.png"],
+      tags: ["Flutter", "https", "ESP32"],
+      category: "Games & Puzzles",
       color: "from-orange-400 to-red-500",
-      appStore: "https://apps.apple.com/app/foodie-explorer/id123456791",
-      playStore: "https://play.google.com/store/apps/details?id=com.example.foodieexplorer",
-      github: "https://github.com/niclas/foodie-explorer"
     },
     {
-      title: "CryptoWallet",
-      description: "Secure cryptocurrency wallet with multi-currency support, portfolio tracking, and trading features.",
-      info: "Hippy is a social music experience where users challenge their friends using real Spotify tracks. Create or join sessions and test your musical memory by guessing song placements, details, and more — all in real-time. Built with Flutter and integrated with Spotify, Hippy offers an engaging way to rediscover your playlists and compete in a fun, interactive format. Spotify Premium required for session hosts.",
-      images: ["/images/hippy/hippy_thumbnail.png", "/images/hippy/hippy_start_screen.png"],
-      tags: ["Kotlin", "Blockchain", "Security", "API"],
-      category: "Finance",
+      title: "Heptas",
+      description: "Manages stock levels, orders, and product flow with ease, all in one smart inventory app.",
+      info: "Heptas is a powerful yet easy-to-use app designed to help the user monitor and manage an inventory with ease. Keep track of stock levels, incoming deliveries, and outgoing customer orders — all in one intuitive interface. Heptas also provides clear flow analytics, offering insights into trends and performance, and helps ensure that you always have the right products in stock. Perfect for businesses that want to streamline operations and avoid running out of essential items.",
+      images: ["/images/heptas/heptas_thumbnail.png", "/images/heptas/heptas_notification.png", "/images/heptas/heptas_inventory.png", "/images/heptas/heptas_more.png"],
+      tags: ["Android", "Kotlin", "Firebase", "SQL"],
+      category: "Logisitics",
       color: "from-yellow-400 to-orange-500",
-      appStore: "https://apps.apple.com/app/crypto-wallet-secure/id123456792",
-      playStore: "https://play.google.com/store/apps/details?id=com.example.cryptowallet",
-      github: "https://github.com/niclas/crypto-wallet"
     },
     {
-      title: "MindfulMoments",
+      title: "Pappas rökeri",
       description: "Meditation and mindfulness app with guided sessions, progress tracking, and community features.",
       info: "Hippy is a social music experience where users challenge their friends using real Spotify tracks. Create or join sessions and test your musical memory by guessing song placements, details, and more — all in real-time. Built with Flutter and integrated with Spotify, Hippy offers an engaging way to rediscover your playlists and compete in a fun, interactive format. Spotify Premium required for session hosts.",
-      images: ["/images/hippy/hippy_thumbnail.png", "/images/hippy/hippy_start_screen.png"],
+      images: ["/images/smoker/smoker_thumbnail.png", "/images/smoker/smoker_notification.png", "/images/smoker/smoker_set_temp.png", "/images/smoker/smoker_add.png"],
       tags: ["React Native", "Audio", "Analytics", "Push Notifications"],
-      category: "Wellness",
+      category: "Home automation",
       color: "from-teal-400 to-blue-500",
       appStore: "https://apps.apple.com/app/mindful-moments/id123456793",
       playStore: "https://play.google.com/store/apps/details?id=com.example.mindfulmoments",
@@ -164,16 +157,7 @@ const Projects = () => {
                     <Button size="sm" className="flex-1">
                       <Smartphone className="mr-2 h-4 w-4" />
                       Download APK
-                    </Button>
-                    {project.github && (
-                      <Button 
-                        variant="outline" 
-                        size="sm"
-                        onClick={() => window.open(project.github, '_blank')}
-                      >
-                        <Github className="h-4 w-4" />
-                      </Button>
-                    )}
+                    </Button>                  
                     {project.appStore && (
                       <Button 
                         variant="outline" 
@@ -192,6 +176,15 @@ const Projects = () => {
                         <FaGooglePlay className="h-4 w-4" />
                       </Button>
                     )}
+                    {project.github && (
+                      <Button 
+                        variant="outline" 
+                        size="sm"
+                        onClick={() => window.open(project.github, '_blank')}
+                      >
+                        <Github className="h-4 w-4" />
+                      </Button>
+                    )}
                   </div>
                 </CardContent>
               </Card>
@@ -202,6 +195,13 @@ const Projects = () => {
                     <DialogDescription className="mb-4 text-muted-foreground text-lg">
                       {project.category}
                     </DialogDescription>
+                    {(project.appStore || project.playStore) && (
+                      <div className="absolute top-6 right-16 z-50">
+                        <div className="bg-green-100 text-green-800 px-4 py-1 rounded-full font-semibold shadow text-sm flex items-center gap-2">
+                          <span role="img" aria-label="party">🎉</span> Published application
+                        </div>
+                      </div>
+                    )}
                   </DialogHeader>
                   <div className="flex-1 overflow-y-auto px-8">
                     <div className="relative w-full" style={{height: '396px'}}>
@@ -262,17 +262,8 @@ const Projects = () => {
                     <div className="flex gap-2">
                       <Button size="sm" className="flex-1">
                         <Smartphone className="mr-2 h-4 w-4" />
-                        Demo
+                        Download APK
                       </Button>
-                      {project.github && (
-                        <Button 
-                          variant="outline" 
-                          size="sm"
-                          onClick={() => window.open(project.github, '_blank')}
-                        >
-                          <Github className="h-4 w-4" />
-                        </Button>
-                      )}
                       {project.appStore && (
                         <Button 
                           variant="outline" 
@@ -289,6 +280,15 @@ const Projects = () => {
                           onClick={() => window.open(project.playStore, '_blank')}
                         >
                           <FaGooglePlay className="h-4 w-4" />
+                        </Button>
+                      )}
+                      {project.github && (
+                        <Button 
+                          variant="outline" 
+                          size="sm"
+                          onClick={() => window.open(project.github, '_blank')}
+                        >
+                          <Github className="h-4 w-4" />
                         </Button>
                       )}
                     </div>
