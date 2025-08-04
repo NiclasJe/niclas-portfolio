@@ -49,6 +49,7 @@ const Projects = () => {
       color: "from-green-400 to-blue-500",
       appStore: "https://apps.apple.com/se/app/hippy/id6746072263?l=en-GB",
       playStore: "https://play.google.com/store/apps/details?id=com.koda.hippy",
+      apk: "apks/hippy-1-3-001.zip",
     },
     {
       title: "Ordly",
@@ -60,16 +61,20 @@ const Projects = () => {
       color: "from-purple-400 to-pink-500",
       appStore: "https://apps.apple.com/se/app/ordly-ordpussel/id6746171956?l=en-GB",
       playStore: "https://play.google.com/store/apps/details?id=com.koda.ordly",
+      apk: "apks/ordly-1-0-005.zip",
     },
     {
       title: "Unravel",
       description: "A murder mystery game where players find clues, solve puzzles and unravel the truth",
-      info: "Unravel is a social detective experience originally created for a private summer party. It blends physical and digital clues, encouraging players to explore their surroundings while uncovering the mystery. The app integrates with ESP32 modules to interact with the physical environment, resulting in a unique and immersive adventure.",
+      info: "Unravel is a social detective experience originally created for a personal summer party. It blends physical and digital clues, encouraging players to explore their surroundings while uncovering the mystery. The app integrates with ESP32 modules to interact with the physical environment, resulting in a unique and immersive adventure.",
       note: "To solve the case accurately, physical evidence must also be collected. Because of this, the digital clues are insufficient to solve the case.",
       images: ["/images/unravel/unravel_thumbnail.png", "/images/unravel/unravel_sizes.png", "/images/unravel/unravel_clues.png", "/images/unravel/unravel_puzzles.png"],
       tags: ["Flutter", "https", "ESP32"],
       category: "Games & Puzzles",
       color: "from-orange-400 to-red-500",
+      appStore: "https://testflight.apple.com/join/9qYEYgHS",
+      playStore: "https://play.google.com/store/apps/details?id=com.koda.unravel",
+      apk: "apks/unravel-1-0-002.zip",
     },
     {
       title: "Heptas",
@@ -143,10 +148,26 @@ const Projects = () => {
                     ))}
                   </div>
                   <div className="flex gap-2">
-                    <Button size="sm" className="flex-1">
-                      <Smartphone className="mr-2 h-4 w-4" />
-                      Download APK
-                    </Button>
+                    {project.apk ? (
+                      <a
+                        href={project.apk}
+                        download
+                        className="flex-1 inline-flex items-center justify-center px-4 py-2 rounded-md bg-primary text-white text-sm font-medium transition-all duration-200 hover:bg-primary/80"
+                        onClick={e => e.stopPropagation()}
+                      >
+                        <Smartphone className="mr-2 h-4 w-4" />
+                        Download APK
+                      </a>
+                    ) : (
+                      <Button
+                        size="sm"
+                        className="flex-1 transition-all duration-200 bg-transparent text-zinc-500 border-zinc-300 cursor-not-allowed opacity-40"
+                        disabled
+                      >
+                        <Smartphone className="mr-2 h-4 w-4" />
+                        Download APK
+                      </Button>
+                    )}
                     {project.appStore && (
                       <Button
                         variant="outline"
@@ -282,10 +303,26 @@ const Projects = () => {
 
                   <div className="flex-shrink-0 p-8 pt-4 border-t bg-background">
                     <div className="flex gap-2">
-                      <Button size="sm" className="flex-1">
-                        <Smartphone className="mr-2 h-4 w-4" />
-                        Download APK
-                      </Button>
+                      {project.apk ? (
+                        <a
+                          href={project.apk}
+                          download
+                          className="flex-1 inline-flex items-center justify-center px-4 py-2 rounded-md bg-primary text-white text-sm font-medium transition-all duration-200 hover:bg-primary/80"
+                          onClick={e => e.stopPropagation()}
+                        >
+                          <Smartphone className="mr-2 h-4 w-4" />
+                          Download APK
+                        </a>
+                      ) : (
+                        <Button
+                          size="sm"
+                          className="flex-1 transition-all duration-200 bg-transparent text-zinc-500 border-zinc-300 cursor-not-allowed opacity-40"
+                          disabled
+                        >
+                          <Smartphone className="mr-2 h-4 w-4" />
+                          Download APK
+                        </Button>
+                      )}
                       {project.appStore && (
                         <Button
                           variant="outline"
