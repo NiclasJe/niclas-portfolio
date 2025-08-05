@@ -49,7 +49,7 @@ const Projects = () => {
       color: "from-green-400 to-blue-500",
       appStore: "https://apps.apple.com/se/app/hippy/id6746072263?l=en-GB",
       playStore: "https://play.google.com/store/apps/details?id=com.koda.hippy",
-      apk: "hippy-1-3-001.zip",
+      apk: "/niclas-portfolio/hippy-1-3-001.zip",
     },
     {
       title: "Ordly",
@@ -61,7 +61,7 @@ const Projects = () => {
       color: "from-purple-400 to-pink-500",
       appStore: "https://apps.apple.com/se/app/ordly-ordpussel/id6746171956?l=en-GB",
       playStore: "https://play.google.com/store/apps/details?id=com.koda.ordly",
-      apk: "ordly-1-0-005.zip",
+      apk: "/niclas-portfolio/ordly-1-0-005.zip",
     },
     {
       title: "Unravel",
@@ -74,7 +74,7 @@ const Projects = () => {
       color: "from-orange-400 to-red-500",
       appStore: "https://testflight.apple.com/join/9qYEYgHS",
       playStore: "https://play.google.com/store/apps/details?id=com.koda.unravel",
-      apk: "unravel-1-0-002.zip",
+      apk: "/niclas-portfolio/apks/unravel-1-0-002.zip",
     },
     {
       title: "Heptas",
@@ -150,8 +150,8 @@ const Projects = () => {
                   <div className="flex gap-2">
                     {project.apk ? (
                       <a
-                        href={"/niclas-portfolio/" + project.apk}
-                        download={project.apk}
+                        href={project.apk}
+                        download
                         className="flex-1 inline-flex items-center justify-center px-4 py-2 rounded-md bg-primary text-white text-sm font-medium transition-all duration-200 hover:bg-primary/80"
                         onClick={e => e.stopPropagation()}
                       >
@@ -305,8 +305,8 @@ const Projects = () => {
                     <div className="flex gap-2">
                       {project.apk ? (
                         <a
-                          href={"/niclas-portfolio/" + project.apk}
-                          download={project.apk}
+                          href={project.apk}
+                          download
                           className="flex-1 inline-flex items-center justify-center px-4 py-2 rounded-md bg-primary text-white text-sm font-medium transition-all duration-200 hover:bg-primary/80"
                           onClick={e => e.stopPropagation()}
                         >
