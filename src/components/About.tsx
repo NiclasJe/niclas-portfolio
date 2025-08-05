@@ -65,7 +65,7 @@ const About = () => {
               <CardContent className="p-8">
                 <div className="flex items-center mb-6">
                   <img 
-                    src="/images/niclas.jpeg" 
+                    src="/niclas-portfolio/images/niclas.jpeg" 
                     alt="Niclas Jernberg" 
                     className="w-20 h-20 rounded-full object-cover mr-6"
                   />
@@ -116,7 +116,7 @@ const About = () => {
                 </div>
 
                 <a
-                  href="/CV 2025 Niclas Jernberg - English.pdf"
+                  href="/niclas-portfolio/CV 2025 Niclas Jernberg - English.pdf"
                   download="CV 2025 Niclas Jernberg - English.pdf"
                   className="inline-flex"
                 >
