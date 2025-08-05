@@ -64,14 +64,16 @@ const About = () => {
             <Card className="h-full border-0 shadow-lg">
               <CardContent className="p-8">
                 <div className="flex items-center mb-6">
-                  <div className="w-20 h-20 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center text-white text-2xl font-bold mr-6">
-                    NJ
-                  </div>
+                  <img 
+                    src="/images/niclas.jpeg" 
+                    alt="Niclas Jernberg" 
+                    className="w-20 h-20 rounded-full object-cover mr-6"
+                  />
                   <div>
                     <h3 className="text-2xl font-bold">Niclas Jernberg</h3>
                     <p className="text-muted-foreground flex items-center">
                       <MapPin className="h-4 w-4 mr-1" />
-                      Göteborg, Sweden
+                      Göteborg/Karlstad, Sweden
                     </p>
                   </div>
                 </div>
@@ -113,10 +115,16 @@ const About = () => {
                   <Badge variant="secondary">3 published apps</Badge>
                 </div>
 
-                <Button size="lg" className="w-full sm:w-auto">
-                  <Download className="mr-2 h-4 w-4" />
-                  Download Resume
-                </Button>
+                <a
+                  href="/CV 2025 Niclas Jernberg - English.pdf"
+                  download="CV 2025 Niclas Jernberg - English.pdf"
+                  className="inline-flex"
+                >
+                  <Button size="lg" className="w-full sm:w-auto">
+                    <Download className="mr-2 h-4 w-4" />
+                    Download Resume
+                  </Button>
+                </a>
               </CardContent>
             </Card>
           </div>

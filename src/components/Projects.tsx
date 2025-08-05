@@ -41,7 +41,7 @@ const Projects = () => {
     {
       title: "Hippy",
       description: "A fun and engaging music quiz app where friends guess the song using Spotify playbacks.",
-      info: "Hippy is a social music experience where users challenge their friends by playing songs via the Spotify app. Create or join sessions and test your musical memory by guessing the release year, song details, and more. Built with Flutter and integrated with Spotify, Hippy offers an engaging way to rediscover your playlists and compete in a fun, interactive format. Choose from various game modes and dificulty levels to keep the challenge fresh.",
+      info: "Hippy is a social music experience where users challenge their friends by playing songs via the Spotify app. Create or join sessions and test your musical memory by guessing the release year, song details, and more. Built with Flutter and integrated with the Spotify SDK, Hippy offers an engaging way to rediscover your playlists and compete in a fun, interactive format. Choose from various game modes and dificulty levels to keep the challenge fresh.",
       note: "To test the app, the Spotify app must be installed and a Spotify Premium account is required. The Spotify user also needs to be added to a list of active users in the Spotify Developer settings. To bypass the playback of the tracks and test the demo, you can enter a dedicated demo mode by presing the 'Skapa ett spel' button, then long-pressing the back button, followed by a long-press on the question mark and then long-pressing the desired game session.",
       images: ["/images/hippy/hippy_thumbnail.png", "/images/hippy/hippy_in_game.png", "/images/hippy/hippy_start_screen.png", "/images/hippy/hippy_creation_result.png"],
       tags: ["Flutter", "Firebase", "Spotify SDK", "SQL"],
@@ -105,19 +105,19 @@ const Projects = () => {
             Some of my <span className="gradient-text">Projects</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            A look into the mobile apps I have crafted during late nights and passion-driven weekends.
+            A look into some mobile apps I have crafted during late nights and passion-driven weekends.
           </p>
           <p className="text-sm text-muted-foreground mt-2 max-w-2xl mx-auto">
             Feel free to download and test the apps that are available.
           </p>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-10" style={{ width: '1500px' }}>
+        <div className="flex flex-wrap justify-center gap-5">
           {projects.map((project, index) => (
             <React.Fragment key={index}>
               <Card
                 className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden animate-slide-in-left border-0 shadow-lg cursor-pointer"
-                style={{ animationDelay: `${index * 0.1}s`, width: '460px', maxWidth: '100%' }}
+                style={{ animationDelay: `${index * 0.1}s`, width: '400px', maxWidth: '100%' }}
                 onClick={() => setOpenIndex(index)}
               >
                 <div className="relative overflow-hidden">
@@ -200,7 +200,7 @@ const Projects = () => {
               </Card>
 
               <Dialog open={openIndex === index} onOpenChange={() => setOpenIndex(null)}>
-                <DialogContent className="max-w-5xl mx-auto p-0 min-h-[500px] max-h-[80vh] flex flex-col">
+                <DialogContent className="w-full max-w-5xl sm:max-w-3xl md:max-w-4xl lg:max-w-5xl mx-auto p-2 sm:p-4 md:p-8 min-h-[400px] max-h-[90vh] flex flex-col">
                   <DialogHeader className="p-8 pb-4 flex-shrink-0">
                     <DialogTitle className="text-3xl font-bold mb-2 gradient-text">
                       {project.title}
@@ -209,7 +209,7 @@ const Projects = () => {
                       {project.category}
                     </DialogDescription>
                     {(project.appStore || project.playStore) && (
-                      <div className="absolute top-6 right-16 z-50">
+                      <div className="absolute top-6 right-12 z-50">
                         <div className="bg-green-100 text-green-800 px-4 py-1 rounded-full font-semibold shadow text-sm flex items-center gap-2">
                           <span role="img" aria-label="party">🎉</span> Published application
                         </div>
@@ -218,16 +218,16 @@ const Projects = () => {
                   </DialogHeader>
 
                   <div className="flex-1 overflow-y-auto px-8">
-                    <div className="relative w-full" style={{ height: '396px' }}>
+                    <div className="relative w-full" style={{ height: 'clamp(237px, 38vw, 376px)' }}>
                       <img
                         src={project.images[0]}
                         alt={project.title}
                         className="absolute object-cover rounded-xl hover:scale-105 cursor-pointer transition-all duration-300 hover:shadow-2xl"
                         style={{
-                          width: '378px',
-                          height: '251px',
-                          left: '12px',
-                          top: '37px',
+                          width: 'clamp(171px, 36vw, 359px)',
+                          height: 'clamp(114px, 24vw, 238px)',
+                          left: 'clamp(4px, 1.9vw, 11px)',
+                          top: 'clamp(11px, 3.8vw, 35px)',
                           boxShadow: '-4px 4px 10px rgba(0, 0, 0, 0.3)',
                           outline: '1px solid rgba(255, 255, 255, 0.2)'
                         }}
@@ -238,10 +238,10 @@ const Projects = () => {
                         alt="Extra 3"
                         className="absolute object-cover rounded-xl hover:scale-105 cursor-pointer transition-all duration-300 hover:shadow-2xl"
                         style={{
-                          width: '256px',
-                          height: '272px',
-                          left: '687px',
-                          top: '18px',
+                          width: 'clamp(114px, 24vw, 243px)',
+                          height: 'clamp(114px, 27vw, 258px)',
+                          left: 'clamp(209px, 66.5vw, 652px)',
+                          top: 'clamp(4px, 1.9vw, 17px)',
                           boxShadow: '-4px 4px 10px rgba(0, 0, 0, 0.3)',
                           outline: '1px solid rgba(255, 255, 255, 0.2)'
                         }}
@@ -252,10 +252,10 @@ const Projects = () => {
                         alt="Extra 1"
                         className="absolute object-cover rounded-xl hover:scale-105 cursor-pointer transition-all duration-300 hover:shadow-2xl"
                         style={{
-                          width: '365px',
-                          height: '136px',
-                          left: '287px',
-                          top: '201px',
+                          width: 'clamp(114px, 34vw, 347px)',
+                          height: 'clamp(57px, 12vw, 129px)',
+                          left: 'clamp(85px, 27.5vw, 272px)',
+                          top: 'clamp(57px, 19vw, 190px)',
                           boxShadow: '-4px 4px 10px rgba(0, 0, 0, 0.3)',
                           outline: '1px solid rgba(255, 255, 255, 0.2)'
                         }}
@@ -266,10 +266,10 @@ const Projects = () => {
                         alt="Extra 2"
                         className="absolute object-cover rounded-xl z-40 hover:scale-105 cursor-pointer transition-all duration-300 hover:shadow-2xl"
                         style={{
-                          width: '256px',
-                          height: '170px',
-                          left: '416px',
-                          top: '12px',
+                          width: 'clamp(114px, 24vw, 243px)',
+                          height: 'clamp(76px, 15vw, 162px)',
+                          left: 'clamp(124px, 39.9vw, 394px)',
+                          top: 'clamp(4px, 1.9vw, 11px)',
                           boxShadow: '-4px 4px 10px rgba(0, 0, 0, 0.3)',
                           outline: '1px solid rgba(255, 255, 255, 0.2)'
                         }}

@@ -7,7 +7,6 @@ import {
   Database,
   Cloud,
   Shield,
-  Zap,
   Users
 } from "lucide-react";
 
@@ -17,7 +16,7 @@ const Skills = () => {
       title: "Mobile Development",
       icon: <Smartphone className="h-6 w-6" />,
       color: "from-blue-500 to-cyan-500",
-      skills: ["Flutter", "Android", "iOS", "Kotlin", "Java", "Jetpack Compose", "Dart"]
+      skills: ["Flutter", "Android", "Kotlin", "Java", "Jetpack Compose", "Dart"]
     },
     {
       title: "Programming Languages",
