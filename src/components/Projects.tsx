@@ -49,7 +49,7 @@ const Projects = () => {
       color: "from-green-400 to-blue-500",
       appStore: "https://apps.apple.com/se/app/hippy/id6746072263?l=en-GB",
       playStore: "https://play.google.com/store/apps/details?id=com.koda.hippy",
-      apk: "/niclas-portfolio/apks/hippy-1-3-001.zip",
+      apk: "/niclas-portfolio/hippy-1-3-001.zip",
     },
     {
       title: "Ordly",
@@ -61,7 +61,7 @@ const Projects = () => {
       color: "from-purple-400 to-pink-500",
       appStore: "https://apps.apple.com/se/app/ordly-ordpussel/id6746171956?l=en-GB",
       playStore: "https://play.google.com/store/apps/details?id=com.koda.ordly",
-      apk: "/niclas-portfolio/apks/ordly-1-0-005.zip",
+      apk: "/niclas-portfolio/ordly-1-0-005.zip",
     },
     {
       title: "Unravel",
@@ -74,7 +74,7 @@ const Projects = () => {
       color: "from-orange-400 to-red-500",
       appStore: "https://testflight.apple.com/join/9qYEYgHS",
       playStore: "https://play.google.com/store/apps/details?id=com.koda.unravel",
-      apk: "/niclas-portfolio/apks/unravel-1-0-002.zip",
+      apk: "/niclas-portfolio/unravel-1-0-002.zip",
     },
     {
       title: "Heptas",
