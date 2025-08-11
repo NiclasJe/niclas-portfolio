@@ -384,7 +384,7 @@ const Projects = () => {
                   <Button
                     variant="ghost"
                     size="icon"
-                    className="absolute left-44 z-50 text-white hover:text-blue-400 bg-black/30 hover:bg-black/50 backdrop-blur-sm border border-white/20 rounded-full w-14 h-14 transition-all duration-300 hover:scale-110 p-0"
+                    className="absolute left-4 sm:left-44 z-50 text-white hover:text-blue-400 bg-black/30 hover:bg-black/50 backdrop-blur-sm border border-white/20 rounded-full w-14 h-14 transition-all duration-300 hover:scale-110 p-0"
                     onClick={(e) => {
                       e.stopPropagation();
                       prevImage();
@@ -395,7 +395,7 @@ const Projects = () => {
                   <Button
                     variant="ghost"
                     size="icon"
-                    className="absolute right-44 z-50 text-white hover:text-blue-400 bg-black/30 hover:bg-black/50 backdrop-blur-sm border border-white/20 rounded-full w-14 h-14 transition-all duration-300 hover:scale-110 p-0"
+                    className="absolute right-4 sm:right-44 z-50 text-white hover:text-blue-400 bg-black/30 hover:bg-black/50 backdrop-blur-sm border border-white/20 rounded-full w-14 h-14 transition-all duration-300 hover:scale-110 p-0"
                     onClick={(e) => {
                       e.stopPropagation();
                       nextImage();
